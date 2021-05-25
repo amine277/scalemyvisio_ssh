@@ -246,6 +246,8 @@ router.post('/stream',async function(req,res){
         room.streamed = 1;
         await room.save();
 
+        console.log("axios streaam");
+
 
         child = cp.spawn("./stream.sh");
 
