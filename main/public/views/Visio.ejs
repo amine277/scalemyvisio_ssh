@@ -1,6 +1,5 @@
 <html>
-
-<head>
+  <head>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
@@ -10,178 +9,221 @@
     <script src="/scripts/RoomClient.js"></script>
     <script type="text/javascript" src="/scripts/frontScript.js"></script>
     <script type="text/javascript">
-        IsLogedIn();
-        window.onunload = (event) => {
-            window.location.pathname = '/Home'
-        };
+      IsLogedIn();
+      window.onunload = (event) => {
+        window.location.pathname = "/Home";
+      };
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
-		<script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
     <style>
-        .settings {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 2px 2px;
-            cursor: pointer;
-        }
+      .settings {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2px 2px;
+        cursor: pointer;
+      }
 
-        .hidden {
-            display: none
-        }
+      .hidden {
+        display: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <!--                NAVIGATION BAR                              -->
-    <nav>
-        <p>Welcome to ScaleMyVisio WebConference</p>
-    </nav>
-    
-
-  
+    <!--<div class="logo"}>
+        <img src="../Image/scale.png" alt="logo scale" width="150">
+    </div>-->
 
     <!--                WEB CONFERENCE SECTION                      -->
-    <div id="control" >
-        <!--<div id='exitButton' class='hidden' onclick="rc.exit()">
+    <div id="control">
+      <!--<div id='exitButton' class='hidden' onclick="rc.exit()">
             <i class="fas fa-door-open"></i>
         </div>-->
-        <!--<br/>-->
-         <!--Audio select--> <select id="audioSelect">
-        </select>
-        <!--<br/>-->
-         <!--Camera select--> <select id="videoSelect">
-        </select>
-        <!--<br />-->
-        <div id="buttons">
-            <div id="buttons_main">
-                <div id='startAudioButton'  onclick="rc.produce(RoomClient.mediaType.audio, audioSelect.value)">
-                    <i class="fas fa-microphone"></i><p>Audio</p>
-                </div>
-                <div id='stopAudioButton' class='hidden' onclick="rc.closeProducer(RoomClient.mediaType.audio)">
-                    <i class="fas fa-microphone-slash"></i><p>Stop audio</p>
-                </div>
-                <div id='startVideoButton'  onclick="rc.produce(RoomClient.mediaType.video, videoSelect.value)">
-                    <i class="fas fa-video"></i><p>Camera</p>
-                </div>
-                <div id='stopVideoButton' class='hidden' onclick="rc.closeProducer(RoomClient.mediaType.video)">
-                    <i class="fas fa-video-slash"></i><p>Stop Camera</p>
-                </div>
-                <div id='startScreenButton'  onclick="rc.produce(RoomClient.mediaType.screen)">
-                    <i class="fas fa-desktop"></i><p>Share screen</p>
-                </div>
-                <div id='stopScreenButton' class='hidden' onclick="rc.closeProducer(RoomClient.mediaType.screen)">
-                    <i class="fas fa-desktop"></i><p>Stop Sharing</p>
-                </div>
-            </div>
+      <!--<br/>-->
+      <!--Audio select-->
+      <select id="audioSelect"></select>
+      <!--<br/>-->
+      <!--Camera select-->
+      <select id="videoSelect"></select>
+      <!--<br />-->
+      <div id="buttons">
+        <div id="buttons_main">
+          <div
+            id="startAudioButton"
+            onclick="rc.produce(RoomClient.mediaType.audio, audioSelect.value)"
+          >
+            <i class="fas fa-microphone"></i>
+            <p>Audio</p>
+          </div>
+          <div
+            id="stopAudioButton"
+            class="hidden"
+            onclick="rc.closeProducer(RoomClient.mediaType.audio)"
+          >
+            <i class="fas fa-microphone-slash"></i>
+            <p>Stop audio</p>
+          </div>
+          <div
+            id="startVideoButton"
+            onclick="rc.produce(RoomClient.mediaType.video, videoSelect.value)"
+          >
+            <i class="fas fa-video"></i>
+            <p>Camera</p>
+          </div>
+          <div
+            id="stopVideoButton"
+            class="hidden"
+            onclick="rc.closeProducer(RoomClient.mediaType.video)"
+          >
+            <i class="fas fa-video-slash"></i>
+            <p>Stop Camera</p>
+          </div>
+          <div
+            id="startScreenButton"
+            onclick="rc.produce(RoomClient.mediaType.screen)"
+          >
+            <i class="fas fa-desktop"></i>
+            <p>Share screen</p>
+          </div>
+          <div
+            id="stopScreenButton"
+            class="hidden"
+            onclick="rc.closeProducer(RoomClient.mediaType.screen)"
+          >
+            <i class="fas fa-desktop"></i>
+            <p>Stop Sharing</p>
+          </div>
+        </div>
 
-            <div class="buttons_deco">
-               
-                <div id="passageVisioStreaming" class='hidden'>
-                    <i class="fab fa-twitch" onclick="rc.startStream()" ></i><p>Go Streaming</p>
-                </div>
-                <div id="stopstream" class='hidden' >
-                    <i class="fas fa-stop-circle" onclick="StopStream()" ></i><p>Stop Streaming</p>
-                </div>
-                
-                
-                <div id="controlePassage" class='hidden'>
-                    <i class="fas fa-user-check" onclick="ParticipantControlHide()"></i><p>Control</p>
-                </div>
-                <div>
-                    <i class="fas fa-users" onclick="getRoomClientList();ParticipantHide()"></i><p>Participant</p>
-                </div>
-                <div>
-                    <i class="fas fa-comment-alt" onclick="ChatHide()"></i><p>Chat</p>
-                </div>
-            </div>
-                <div id='exitButton' type="submit"  onclick="exitRoom(),rc.exit()">
-                   <button type="submit"><i class="fas fa-door-open"></i><p>Exit</p></button>
-                </div>
+        <div class="buttons_deco">
+          <div id="passageVisioStreaming" class="hidden">
+            <i class="fab fa-twitch" onclick="rc.startStream()"></i>
+            <p>Go Streaming</p>
+          </div>
+          <div id="stopstream" class="hidden">
+            <i class="fas fa-stop-circle" onclick="StopStream()"></i>
+            <p>Stop Streaming</p>
+          </div>
+
+          <div id="controlePassage" class="hidden">
+            <i class="fas fa-user-check" onclick="ParticipantControlHide()"></i>
+            <p>Control</p>
+          </div>
+          <div>
+            <i
+              class="fas fa-users"
+              onclick="getRoomClientList();ParticipantHide()"
+            ></i>
+            <p>Participants</p>
+          </div>
+          <div id="ViewerButton" class="hidden">
+            <i
+              class="fas fa-eye"
+              onclick="getRoomViewersList();ViewerHide()"
+            ></i>
+            <p>Viewers</p>
+          </div>
+          <div>
+            <i class="fas fa-comment-alt" onclick="ChatHide()"></i>
+            <p>Chat</p>
+          </div>
         </div>
-        <!--<br />-->
-        <div id="chat">
-             <div class="chat_header">
-               <p>Chat</p>
-               <ul id="conteneurMessage">
-                   
-               </ul>
-            </div>
-            <!--<form action="" id="chatForm" onsubmit="rc.sendChat();return false">-->
-                <div id="chat_message">
-                    <input id="chat_input" type="text" placeholder="Type message here"/>
-                </div>
+        <div id="exitButton" type="submit" onclick="exitRoom(),rc.exit()">
+          <button type="submit">
+            <i class="fas fa-door-open"></i>
+            <p>Exit</p>
+          </button>
         </div>
+      </div>
+      <!--<br />-->
+      <div id="chat">
+        <div class="chat_header">
+          <p>Chat</p>
+          <ul id="conteneurMessage"></ul>
+        </div>
+        <!--<form action="" id="chatForm" onsubmit="rc.sendChat();return false">-->
+        <div id="chat_message">
+          <input id="chat_input" type="text" placeholder="Type message here" />
+        </div>
+      </div>
     </div>
-    
 
-
-    <div id='videoMedia' >
-        <!--<h2 style="color:white">local</h2>-->
-        <div id="FirstVideoDiv">
-            <div id="localMedia"></div>
-            <div id="ParticipantControl"><p>Control</p>
-                <ul id="ParticipantControlList">
-                </ul>
-            </div>
-            <div id="Participant"><p>Participants</p>
-                <ul id="ParticipantList">
-                </ul>
-                <div id="ParticipantListExtra">SWAP ROLES</div>
-
-            </div>
+    <div id="videoMedia">
+      <!--<h2 style="color:white">local</h2>-->
+      <div id="FirstVideoDiv">
+        <div id="localMedia"></div>
+        <div id="ParticipantControl">
+          <p>Control</p>
+          <ul id="ParticipantControlList"></ul>
         </div>
-        <!--<video id="localVideo" autoplay inline class="vid"></video>-->
-        <!--<video id="localScreen" autoplay inline class="vid"></video>-->
-        <!--<h2 style="color:white">remote</h2>-->
-        <div id="remoteVideos" class="container"></div>
+        <div id="Participant">
+          <p>Participants</p>
+          <ul id="ParticipantList"></ul>
+        </div>
+        <div id="Viewer">
+          <p>Viewers</p>
+          <ul id="ViewerList"></ul>
+        </div>
+      </div>
+      <!--<video id="localVideo" autoplay inline class="vid"></video>-->
+      <!--<video id="localScreen" autoplay inline class="vid"></video>-->
+      <!--<h2 style="color:white">remote</h2>-->
+      <div id="remoteVideos" class="container"></div>
 
-        <div id="remoteAudios"></div>
+      <div id="remoteAudios"></div>
     </div>
-    
 
     <script type="text/javascript" src="stream.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+  </body>
 
-</body>
-
-
-
-<footer>
+  <footer>
     <script src="/scripts/index.js"></script>
     <script type="text/javascript">
-        // Mon code Javascript
-          
-        console.log('is admiin ',sessionStorage.getItem('isAdmin') )
-        if ( sessionStorage.getItem('isAdmin') == 1  ){
+      // Mon code Javascript
 
-            console.log("helloo")
+      console.log("is admiin ", sessionStorage.getItem("isAdmin"));
+      if (
+        sessionStorage.getItem("isAdmin") == sessionStorage.getItem("RoomId")
+      ) {
+        console.log("helloo");
 
-            var y = document.getElementById("passageVisioStreaming");
-            y.className = '';
+        var y = document.getElementById("passageVisioStreaming");
+        y.className = "";
 
-        }
+        var x = document.getElementById("ViewerButton");
+        x.className = "";
+      }
 
+      var inRoom = sessionStorage.getItem("inRoom");
 
-        var inRoom = sessionStorage.getItem('inRoom');
-
-        //if(inRoom == 0 ){
-        var name = sessionStorage.getItem('name');
-        var RoomId = sessionStorage.getItem('RoomId');
-        sessionStorage.setItem('inRoom',1);
-        joinRoom(name,RoomId,sessionStorage.getItem('Id'));
-    //}
-
-      </script>
-</footer>
-
+      //if(inRoom == 0 ){
+      var name = sessionStorage.getItem("name");
+      var RoomId = sessionStorage.getItem("RoomId");
+      sessionStorage.setItem("inRoom", 1);
+      joinRoom(name, RoomId, sessionStorage.getItem("Id"));
+      //}
+    </script>
+  </footer>
 </html>

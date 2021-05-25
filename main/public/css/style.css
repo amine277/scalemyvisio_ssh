@@ -1,521 +1,545 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Sans-Serif;
-    background-color: #242424;
-    background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+  background-color: #242424;
+  background-size: cover;
 }
 
 a {
-    color: rgb(226,226,226);
-    font-size: 28px;
-    margin-left: 30px;
-    transform: translateY(26%);
+  color: rgb(226, 226, 226);
+  font-size: 28px;
+  margin-left: 30px;
+  transform: translateY(26%);
 }
 
 a:hover {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 input::placeholder {
-    color:B9B9B9;
+  color: B9B9B9;
 }
-
 
 /*                                  NAVBAR SECTION                              */
 #btn {
-    background: #222;
-    height: 10px;
-    display: flex;
-    min-width: 150px;
-    border: none;
-    width: 250px;
-    position: absolute;
-    top: 70%;
-    left: 40%;
-    border-radius: 10px;
-    color: #eee;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    transition: 1s;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-tap-highlight-color: transparent;
-    clear: both;
-    justify-content: center;
-    cursor: pointer;
-    padding-top: 2px;
-  }
-  
-  #btn #circle {
-    width: 5px;
-    height: 5px;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    overflow: hidden;
-    transition: 700ms;
-  }
-  
-  .noselect {
-    -webkit-touch-callout: none;
-      -webkit-user-select: none;
-       -khtml-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-  }
-  
-  #btn:hover {
-    background: transparent;
-  }
-  
-  #btn:hover #circle {
-    height: 30px;
-    width: 150px;
-    left: auto;
-    border-radius: 0;
-    position: center;
-    
-    border-bottom: 2px solid #4caf50;
-  }
+  background: #222;
+  height: 10px;
+  display: flex;
+  min-width: 150px;
+  border: none;
+  width: 250px;
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  transition: 1s;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-tap-highlight-color: transparent;
+  clear: both;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 2px;
+}
 
-nav {
+#btn #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 700ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#btn:hover {
+  background: transparent;
+}
+
+#btn:hover #circle {
+  height: 30px;
+  width: 150px;
+  left: auto;
+  border-radius: 0;
+  position: center;
+
+  border-bottom: 2px solid #6495ed;
+}
+
+/*nav {
     width: 100%;
     height: 8%;
     font-family: 'Poppins', sans-serif; 
     background-color: #373636;
-}
+}*/
 
-nav p {
+/*nav p {
     color: rgb(226,226,226);
     font-size: 28px;
     margin-left: 30px;
     transform: translateY(26%);
+}*/
+.logo {
+  width: 220px;
+  position: absolute;
+}
+div img {
+  width: 200px;
+  padding-top: 20px;
+  padding-left: 15px;
 }
 
 /*                                  LOGIN SECTION                               */
 
 #login {
-    width: 280px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-    text-align: center;
+  width: 280px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
 }
 
 #login h1 {
-    float: left;
-    font-size: 40px;
-    border-bottom: 6px solid #4caf50;
-    margin-bottom: 50px;
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid #6495ed;
+  margin-bottom: 50px;
 }
 
-.textbox{
-    width: 280px;
-    overflow: hidden;
-    padding: 8px 0;
-    margin: 8px 0;
-    border-bottom: 1px solid #4caf50;
+.textbox {
+  width: 280px;
+  overflow: hidden;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #6495ed;
 }
 
-.textbox i{
-    width: 26px;
-    float: left;
-    text-align: center;
+.textbox i {
+  width: 26px;
+  float: left;
+  text-align: center;
 }
 
 .textbox input {
-    border: none;
-    outline: none;
-    background: none;
-    color: white;
-    font-size: 18px;
-    width: 80%;
-    float: left;
-    margin: 0 10px;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
 }
 
 #startButtons {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 430px;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 430px;
 }
 
 #startButtons button {
-    width: 30%;
-    background: none;
-    border: 2px solid #4caf50;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-    margin: 12px 0;
-    margin: 10px;
+  width: 30%;
+  background: none;
+  border: 2px solid #6495ed;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  margin: 12px 0;
+  margin: 10px;
 }
 
 /*                                HOME SECTION                                  */
 
 #home {
-    width: 280px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 #home h1 {
-    float: left;
-    font-size: 40px;
-    border-bottom: 6px solid #4caf50;
-    margin-bottom: 50px;
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid #6495ed;
+  margin-bottom: 50px;
 }
 
 #homeButton {
-    width: 100%;
-    background: none;
-    border: 2px solid #4caf50;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-    margin: 12px 0;
-    margin: 10px;
+  width: 100%;
+  background: none;
+  border: 2px solid #6495ed;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  margin: 12px 0;
+  margin: 10px;
 }
 
 #noAccount {
-    display: block;
-    color: #8A8A8A;
+  display: block;
+  color: #8a8a8a;
 }
 
 #noAccount_button {
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: 'arial', sans-serif;
-    cursor: pointer;
-    color: #8A8A8A;
-    font-size: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "arial", sans-serif;
+  cursor: pointer;
+  color: #8a8a8a;
+  font-size: 20px;
 }
 
 #noAccount_button:hover {
-    color: #367F39;
+  color: #6495ed;
 }
 
 .eye i {
-    position: absolute;
-    right: 0;
-    margin-top: 5px;
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
 }
 
 #hide1 {
-    display: none;
+  display: none;
 }
 
 /*                  REGISTER SECTION                                            */
 
 #register {
-    width: 280px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 #register h1 {
-    float: left;
-    font-size: 40px;
-    border-bottom: 6px solid #4caf50;
-    margin-bottom: 50px;
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid /*#4caf50*/ #6495ed;
+  margin-bottom: 50px;
 }
 
 #register button {
-    width: 100%;
-    background: none;
-    border: 2px solid #4caf50;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-    margin: 12px 0;
-    margin: 10px;
+  width: 100%;
+  background: none;
+  border: 2px solid #6495ed;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  margin: 12px 0;
+  margin: 10px;
 }
 
 /*                  WEB CONFERENCE SECTION                                      */
 
-
 /*              Buttons Div             */
 
 #control i {
-    color: white;
-    font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
 
 #audioSelect {
-    display:none;
+  display: none;
 }
 #videoSelect {
-    display:none;
+  display: none;
 }
 
 #buttons {
-    position: fixed;
-    bottom: 0;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #buttons div {
-    margin: 0 15px;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 15px;
+  margin: 0 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 15px;
 }
 
 #buttons_main {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .buttons_deco {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 #buttons_exit {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 #exitButton button {
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-	margin-top: 18px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin-top: 18px;
 }
 
 /*              Chat Div            */
 
 #chat {
     width: 20%;
-    height: 92%;
+    height: 93%;
     background-color:#343434;
     float: right;
+    overflow: scroll;
 }
 
 .chat_header p {
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding-top: 7%;
 }
-
 #chat_message {
     position: fixed;
     bottom: 0;
     width:20%;
-    height: 9%;
+    height: 7%;
+    background-color: #343434;
 }
 
 #chat_message input {
-    margin:0 20px;
-    background-color: transparent;
-    border: none;
-    width:100%;
-    color: white;
+  margin: 0 20px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: white;
 }
 
 #conteneurMessage li {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 /*              Local Room              */
 
 video {
-    height: 200px;
-    width: 300px;
+  height: 200px;
+  width: 300px;
 }
 
 #videoMedia {
-    width:80%;
-   
+  width: 80%;
 }
 
 #FirstVideoDiv {
-    height: 40%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 #localMedia {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
 }
 
 #localMedia video {
-    height: 450px;
-    width: 500px;
-    margin-right: 15px;
+  height: 450px;
+  width: 500px;
+  margin-right: 15px;
+  bottom: 0;
 }
 
 #Participant {
-    width: 15%;
-    height:330px;
-    background-color: #343434;
-    padding: 5px;
-    display: none;
-    margin-right: 5px;
+  width: 15%;
+  height: 330px;
+  background-color: #343434;
+  padding: 5px;
+  display: none;
+  margin-right: 5px;
 }
 
 #Participant p {
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
 }
 
 #Participant li {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 #ParticipantControl {
-    width: 15%;
-    height:330px;
-    background-color: #343434;
-    padding: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    display: none;
+  width: 15%;
+  height: 330px;
+  background-color: #343434;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  display: none;
 }
 #ParticipantListExtra {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 #ParticipantControl p {
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
 }
 
 #ParticipantControl li {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+#Viewer {
+  width: 15%;
+  height: 330px;
+  background-color: #343434;
+  padding: 5px;
+  display: none;
+  margin-right: 5px;
+}
+
+#Viewer p {
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+#Viewer li {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 #remoteVideos {
-    height: 41%;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:  wrap;
-    justify-content: center;
-    align-items: center;
+  height: 41%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 #remoteVideos Video {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 /*                      Streaming Section                                   */
 
 #streamingSection {
-    height: 92%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 #streamingSection i {
-    color: white;
-    font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
 
 #StreamDiv {
-    height: 100%;
-    display: flex;
+  height: 100%;
+  display: flex;
 }
 
 #videoStreming {
-    width: 100%;
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 90px;
 }
 
 #ChatStreaming{
     top:0;
     width: 25%;
-    height: 100%;
+    height: 93%;
     float: right;
     background-color: #343434;
+    overflow-y: scroll;
 }
 
 #ParticipantsStreaming {
-    height: 35%;
-    width: 15%;
-    background-color: #343434;
-    margin: 0 10px;
-    
+  height: 35%;
+  width: 15%;
+  background-color: #343434;
+  margin: 0 10px;
 }
 
 #StreamingButtons {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #StreamingButtons div {
-    margin: 0 15px;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 15px;
+  margin: 0 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 15px;
 }
 
 #StreamingButtons_main {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 #conteneurMessageStreaming li {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
-
-
-
-
-
-
-
-

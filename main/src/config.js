@@ -1,7 +1,7 @@
 const os = require('os')
 
 module.exports = {
-    listenIp: '159.65.183.139',
+    listenIp: '0.0.0.0',
     listenPort: process.env.PORT || 3016,
     sslCrt: '../ssl/cert.pem',
     sslKey: '../ssl/key.pem',
@@ -63,7 +63,7 @@ module.exports = {
       },
     // WebRtcTransport settings
     webRtcTransport: {
-      listenIps: [{ ip: "159.65.183.139", announcedIp: null }],
+      listenIps: [{ ip: "127.0.0.1", announcedIp: null }],
       enableUdp: true,
       enableTcp: true,
       preferUdp: true,
@@ -71,12 +71,12 @@ module.exports = {
     },
     // PlainTransportOptions
     plainTransport: {
-      listenIp: { ip: "159.65.183.139", announcedIp: null },
+      listenIp: { ip: "127.0.0.1", announcedIp: null },
     },
 
      // Target IP and port for RTP recording
      recording: {
-      ip: "159.65.183.139",
+      ip: "127.0.0.1",
 
       // GStreamer's sdpdemux only supports RTCP = RTP + 1
       audioPort: 5004,

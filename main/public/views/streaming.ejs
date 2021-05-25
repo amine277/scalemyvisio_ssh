@@ -1,6 +1,5 @@
 <html>
-
-<head>
+  <head>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
@@ -10,117 +9,132 @@
     <script src="/scripts/RoomClient.js"></script>
     <script type="text/javascript" src="/scripts/frontScript.js"></script>
     <script type="text/javascript">
-        IsLogedIn();
+      IsLogedIn();
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
-		<script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
     <style>
-        .settings {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 2px 2px;
-            cursor: pointer;
-        }
+      .settings {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 2px 2px;
+        cursor: pointer;
+      }
 
-        .hidden {
-            display: none
-        }
+      .hidden {
+        display: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <!--                NAVIGATION BAR                              -->
-    <nav>
-        <p>Welcome to ScaleMyVisio WebConference</p>
-    </nav>
-    
+    <!--<div class="logo">
+        <img src="../Image/scale.png" alt="logo scale" width="150">
+    </div>-->
 
-    
     <!--                Streaming SECTION                           -->
-    
+
     <!--                Streaming SECTION                           -->
-    
+
     <div id="streamingSection">
-        <div id="StreamDiv">
-            <div id="videoStreming">
-		        <video id="player" class="video-js vjs-default-skin" width="720" controls preload="auto">
-		    	    <source src= "https://159.65.183.139:433/hls/test.m3u8"
-                 type="application/x-mpegURL" />
-		        </video>
-		        <script>
-		    	    var player = videojs('#player');
-		        </script>
-            </div>
-            
-            <div id="ParticipantsStreaming" class="hidden">
-                <div class="chat_header">
-                    <p>Participants</p>
-                    <ul id="ParticipantList"></ul>
-                </div>
-            </div>
-        
-            <div id="ChatStreaming" class="hidden">
-                <div class="chat_header">
-                    <p>Chat</p>
-                    <ul id="conteneurMessage"></ul>
-                </div>
-                <!--<form action="" id="chatForm" onsubmit="rc.sendChat();return false"> 
+      <div id="StreamDiv">
+        <div id="videoStreming">
+          <video
+            id="player"
+            class="video-js vjs-default-skin"
+            width="900px"
+            controls
+            preload="auto"
+          >
+            <source
+              src="http://localhost:8080/hls/test.m3u8"
+              type="application/x-mpegURL"
+            />
+          </video>
+          <script>
+            var player = videojs("#player");
+          </script>
+        </div>
+
+        <div id="ParticipantsStreaming" class="hidden">
+          <div class="chat_header">
+            <p>Participants</p>
+            <ul id="ParticipantList"></ul>
+          </div>
+        </div>
+
+        <div id="ChatStreaming" class="hidden">
+          <div class="chat_header">
+            <p>Chat</p>
+            <ul id="conteneurMessage"></ul>
+          </div>
+          <!--<form action="" id="chatForm" onsubmit="rc.sendChat();return false"> 
                 onclick="joinRoom(nameInput.value, roomidInput.value)"-->
-                <div id="chat_message">
-                    <input id="chat_input" type="text" placeholder="Type message here"/>
-                </div>
-            </div>
-            
+          <div id="chat_message">
+            <input
+              id="chat_input"
+              type="text"
+              placeholder="Type message here"
+            />
+          </div>
         </div>
-        <div id="StreamingButtons">
-            <div class="buttons_main">
-                
-                    <div id="passageStreamingVisio" onclick="goVisio()">
-                        <i class="fas fa-video"></i><p>Go Visio</p>
-                    </div>
-                
-            </div>
-            <div class="buttons_deco">
-                <div>
-                    <i class="fas fa-users" onclick="getRoomClientList();participantStreamingHide()"></i><p>Participants</p>
-                </div>
-                <div>
-                    <i class="fas fa-comment-alt" onclick="chatStreamingHide()"></i><p>Chat</p>
-                </div>
-            </div>
+      </div>
+      <div id="StreamingButtons">
+        <div class="buttons_main">
+          <div id="passageStreamingVisio" onclick="goVisio()">
+            <i class="fas fa-video"></i>
+            <p>Join</p>
+          </div>
+        </div>
+        <div class="buttons_deco">
+          <div>
+            <i class="fas fa-comment-alt" onclick="chatStreamingHide()"></i>
+            <p>Chat</p>
+          </div>
+        </div>
+        <div>
+          <a href="Home.html">
             <div>
-                <a href="Home.html">
-                <div>
-                    <div>
-                        <i class="fas fa-door-open"></i><p>Exit</p>
-                    </div>
-                </div>
-                </a>
-            </div>   
+              <div>
+                <i class="fas fa-door-open"></i>
+                <p>Exit</p>
+              </div>
+            </div>
+          </a>
         </div>
+      </div>
     </div>
-    
- 
-    
-    
+
     <script src="/socket.io/socket.io.js"></script>
+  </body>
 
-</body>
-
-
-
-<footer>
+  <footer>
     <script src="/scripts/index.js"></script>
-</footer>
-
+    <script type="text/javascript">
+      socket.emit("addViewer", {
+        viewerId: sessionStorage.getItem("Id"),
+        roomId: sessionStorage.getItem("stream_id"),
+      });
+    </script>
+  </footer>
 </html>
