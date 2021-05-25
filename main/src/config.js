@@ -63,7 +63,7 @@ module.exports = {
       },
     // WebRtcTransport settings
     webRtcTransport: {
-      listenIps: [{ ip: "127.0.0.1", announcedIp: null }],
+      listenIps: [{ ip: "159.65.183.139", announcedIp: null }],
       enableUdp: true,
       enableTcp: true,
       preferUdp: true,
@@ -71,12 +71,12 @@ module.exports = {
     },
     // PlainTransportOptions
     plainTransport: {
-      listenIp: { ip: "127.0.0.1", announcedIp: null },
+      listenIp: { ip: "159.65.183.139", announcedIp: null },
     },
 
      // Target IP and port for RTP recording
      recording: {
-      ip: "127.0.0.1",
+      ip: "159.65.183.139",
 
       // GStreamer's sdpdemux only supports RTCP = RTP + 1
       audioPort: 5004,

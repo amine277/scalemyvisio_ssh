@@ -452,7 +452,7 @@ async function handleStartRecording(router, producer_id) {
     // FFmpeg and GStreamer don't support RTP/RTCP multiplexing ("a=rtcp-mux" in SDP)
     rtcpMux: false,
 
-    listenIp: "127.0.0.1",
+    listenIp: "159.65.183.139",
   });
   // config.mediasoup.rtp.videoTransport = rtpTransport;
 

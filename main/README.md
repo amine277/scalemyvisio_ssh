@@ -6,7 +6,7 @@ This project is featured on the [mediasoup examples page](https://mediasoup.org/
 
 # Running the code
 
-- run `npm install` then `npm start` to run the application. Then open your browser at `https://localhost:3016` or your own defined port/url in the config file.
+- run `npm install` then `npm start` to run the application. Then open your browser at `https://159.65.183.139:3016` or your own defined port/url in the config file.
 - (optional) edit the `src/config.js` file according to your needs and replace the `ssl/key.pem ssl/cert.pem` certificates with your own.
 
 # Deployment
