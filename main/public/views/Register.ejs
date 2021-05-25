@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="modules/mediasoupclient.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/EventEmitter/5.2.8/EventEmitter.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/scripts/RoomClient.js"></script>
+    <script type="text/javascript" src="/scripts/frontScript.js"></script>
+    <script type="text/javascript">
+        IsLogedOut();
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
+		<script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+    <style>
+        .settings { 
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!--                NAVIGATION BAR                              -->
+    <nav>
+        <p>Welcome to ScaleMyVisio WebConference</p>
+    </nav>
+    
+
+
+    <!--                REGISTER SECTION                            -->
+    <div id="register" >
+        <h1>Sign up</h1>
+        <div class="textbox">
+           <i class="fas fa-at"></i>
+           <input id="registerEmailInput"  name="email" value="" type="text" placeholder="Email" />
+        </div>
+        <div class="textbox">
+           <i class="fas fa-user-alt"></i>
+           <input id="PseudoInput" name="name"  value="" type="text" placeholder="Pseudo" />
+        </div>
+        <!--<button id="createRoom" onclick="createRoom(roomid.value)" label="createRoom">Create Room</button>-->
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input id='registerPasswordInput' name="password" value="" type="password" placeholder="Password"/>
+            <span class="eye" onclick="registerPasswordHide()">
+                <i id="registerHide1" class="fa fa-eye"></i>
+                <i id="registerHide2" class="fa fa-eye-slash"></i>
+            </span>
+        </div>
+
+        <div>
+            <button id='loginButton' onclick="SignUp_Request(registerEmailInput.value,PseudoInput.value,registerPasswordInput.value)">Submit</button>
+
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+
+</body> 
+
+
+
+<footer>
+    <script src="/scripts/index.js"></script>
+    <script>
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+        </script>
+</footer>²
